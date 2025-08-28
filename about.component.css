@@ -1,0 +1,164 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Global Styles */
+* {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom Gradient Backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 25%, #7c3aed 50%, #c026d3 75%, #e11d48 100%);
+}
+
+.section-divider {
+  background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+  height: 1px;
+}
+
+/* Custom Primary Colors */
+.bg-primary-50 { background-color: #fff7ed; }
+.bg-primary-100 { background-color: #ffedd5; }
+.bg-primary-200 { background-color: #fed7aa; }
+.bg-primary-300 { background-color: #fdba74; }
+.bg-primary-400 { background-color: #fb923c; }
+.bg-primary-500 { background-color: #f97316; }
+.bg-primary-600 { background-color: #ea580c; }
+.bg-primary-700 { background-color: #c2410c; }
+.bg-primary-800 { background-color: #9a3412; }
+.bg-primary-900 { background-color: #7c2d12; }
+
+.text-primary-50 { color: #fff7ed; }
+.text-primary-100 { color: #ffedd5; }
+.text-primary-200 { color: #fed7aa; }
+.text-primary-300 { color: #fdba74; }
+.text-primary-400 { color: #fb923c; }
+.text-primary-500 { color: #f97316; }
+.text-primary-600 { color: #ea580c; }
+.text-primary-700 { color: #c2410c; }
+.text-primary-800 { color: #9a3412; }
+.text-primary-900 { color: #7c2d12; }
+
+.border-primary-50 { border-color: #fff7ed; }
+.border-primary-100 { border-color: #ffedd5; }
+.border-primary-200 { border-color: #fed7aa; }
+.border-primary-300 { border-color: #fdba74; }
+.border-primary-400 { border-color: #fb923c; }
+.border-primary-500 { border-color: #f97316; }
+.border-primary-600 { border-color: #ea580c; }
+.border-primary-700 { border-color: #c2410c; }
+.border-primary-800 { border-color: #9a3412; }
+.border-primary-900 { border-color: #7c2d12; }
+
+.ring-primary-50 { --tw-ring-color: #fff7ed; }
+.ring-primary-100 { --tw-ring-color: #ffedd5; }
+.ring-primary-200 { --tw-ring-color: #fed7aa; }
+.ring-primary-300 { --tw-ring-color: #fdba74; }
+.ring-primary-400 { --tw-ring-color: #fb923c; }
+.ring-primary-500 { --tw-ring-color: #f97316; }
+.ring-primary-600 { --tw-ring-color: #ea580c; }
+.ring-primary-700 { --tw-ring-color: #c2410c; }
+.ring-primary-800 { --tw-ring-color: #9a3412; }
+.ring-primary-900 { --tw-ring-color: #7c2d12; }
+
+/* Hover States */
+.hover\:bg-primary-500:hover { background-color: #f97316; }
+.hover\:bg-primary-600:hover { background-color: #ea580c; }
+.hover\:bg-primary-700:hover { background-color: #c2410c; }
+
+.hover\:text-primary-500:hover { color: #f97316; }
+.hover\:text-primary-600:hover { color: #ea580c; }
+.hover\:text-primary-700:hover { color: #c2410c; }
+
+.hover\:border-primary-200:hover { border-color: #fed7aa; }
+.hover\:ring-primary-200:hover { --tw-ring-color: #fed7aa; }
+
+/* From/To Gradient Classes */
+.from-primary-500 { --tw-gradient-from: #f97316; }
+.to-primary-600 { --tw-gradient-to: #ea580c; }
+
+/* Custom Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+.float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ea580c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2410c;
+}
+
+/* Responsive Utilities */
+@media (max-width: 640px) {
+  .text-6xl { font-size: 3.5rem; }
+  .text-7xl { font-size: 4rem; }
+  .text-8xl { font-size: 4.5rem; }
+}
+
+/* Focus States for Accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
+}
+
+/* Loading State */
+.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* Print Styles */
+@media print {
+  .hero-gradient {
+    background: #1e3a8a !important;
+    -webkit-print-color-adjust: exact;
+  }
+  
+  .bg-gradient-to-r {
+    background: #ea580c !important;
+    -webkit-print-color-adjust: exact;
+  }
+}
